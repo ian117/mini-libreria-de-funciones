@@ -65,13 +65,21 @@ function ianPluck(array,value){
 
 
 
-function ianWithout(array,value){
-    const newArray = []
+function ianWithout(argumentos){
+    let array = arguments[0];
+    const newArray = [];
 
     for(let i = 0; i < array.length; i++){
-        if(array[i] !== value){
+        let condition = 0
+        for(let j = 1; j < arguments.length; j++){
+            if(array[i] == arguments[j]){
+                condition = 1
+            }
+        }
+        if(condition == 0){
             newArray.push(array[i])
         }
     }
     return newArray
 }
+
