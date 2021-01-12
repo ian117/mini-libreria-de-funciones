@@ -52,17 +52,15 @@ function ianContains(array, value, fromIndex = 0){
 }
 
 
-
-function ianPluck(array,value){
+function ianPluck(list,property){
     const newArray = []
-    for(let i = 0; i < array.length; i++){
-        if(array[i] == value){
-            newArray.push(array[i])
-        }
+
+    for(let i = 0; i < list.length; i++){
+        newArray.push(list[i][property])
     }
+    
     return newArray
 }
-
 
 
 function ianWithout(argumentos){
@@ -82,4 +80,3 @@ function ianWithout(argumentos){
     }
     return newArray
 }
-
